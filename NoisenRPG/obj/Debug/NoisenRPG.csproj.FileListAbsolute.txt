@@ -9,3 +9,8 @@ E:\projects\NoisenRPG\NoisenRPG\obj\Debug\NoisenRPG.exe
 E:\projects\NoisenRPG\NoisenRPG\obj\Debug\NoisenRPG.pdb
 E:\projects\NoisenRPG\NoisenRPG\obj\Debug\NoisenRPG.NoisenRPG.resources
 E:\projects\NoisenRPG\NoisenRPG\obj\Debug\NoisenRPG.Properties.Resources.resources
+E:\projects\NoisenRPG\NoisenRPG\bin\Debug\Interop.WMPLib.dll
+E:\projects\NoisenRPG\NoisenRPG\bin\Debug\AxInterop.WMPLib.dll
+E:\projects\NoisenRPG\NoisenRPG\obj\Debug\Interop.WMPLib.dll
+E:\projects\NoisenRPG\NoisenRPG\obj\Debug\AxInterop.WMPLib.dll
+E:\projects\NoisenRPG\NoisenRPG\obj\Debug\NoisenRPG.csproj.ResolveComReference.cache

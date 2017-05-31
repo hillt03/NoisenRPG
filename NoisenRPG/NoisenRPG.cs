@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-
 using GameEngine;
+
 
 namespace NoisenRPG
 {
@@ -10,6 +10,7 @@ namespace NoisenRPG
     {
         private Player _player;
         private Monster _currentMonster;
+
 
         public NoisenRPG()
         {
@@ -146,7 +147,7 @@ namespace NoisenRPG
             // Does the location have a monster?
             if (newLocation.MonsterLivingHere != null)
             {
-                
+
                 rtbMessages.Text += "You see a " + newLocation.MonsterLivingHere.Name + Environment.NewLine;
 
                 // Make a new monster, using the values from the standard monster in the World.Monster list
@@ -292,7 +293,7 @@ namespace NoisenRPG
             }
         }
 
-        
+
         private void btnUseWeapon_Click(object sender, EventArgs e)
         {
             // Get the currently selected weapon from the cboWeapons ComboBox
@@ -376,7 +377,7 @@ namespace NoisenRPG
                 rtbMessages.Text += Environment.NewLine;
 
                 // Move player to current location (to heal player and create a new monster to fight)
-               
+
                 MoveTo(_player.CurrentLocation);
 
             }
@@ -464,12 +465,12 @@ namespace NoisenRPG
         //Autoscroll Rich Textbox
         private void rtbMessages_TextChanged(object sender, EventArgs e)
         {
-            
+
             rtbMessages.SelectionStart = rtbMessages.Text.Length;
             rtbMessages.ScrollToCaret();
         }
 
-        
+
         private void UpdatePlayerStats()
         {
             // Refresh player information and inventory controls
@@ -479,6 +480,16 @@ namespace NoisenRPG
             lblLevel.Text = _player.Level.ToString();
         }
 
-       
+        private WMPLib.WindowsMediaPlayer musicPlayer = new WMPLib.WindowsMediaPlayer();
+        private void btnPlayMusic_Click(object sender, EventArgs e)
+        {
+            musicPlayer.URL = "Solitude.mp3";
+            musicPlayer.controls.play();
+        }
+
+        private void btnStopMusic_Click(object sender, EventArgs e)
+        {
+            musicPlayer.controls.stop();
+        }
     }
 }
