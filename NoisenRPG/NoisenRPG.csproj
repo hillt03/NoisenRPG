@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3F565B3A-6EE8-48F1-8054-E4AD1E756645}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SuperAdventure</RootNamespace>
+    <RootNamespace>NoisenRPG</RootNamespace>
     <AssemblyName>NoisenRPG</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
