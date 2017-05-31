@@ -1,5 +1,5 @@
 # NoisenRPG
 A text RPG made in C#.
 
-# Credits
+## Credits
 Huge thanks to Scott Lilly for his C# tutorials.
