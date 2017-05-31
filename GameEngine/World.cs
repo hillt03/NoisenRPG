@@ -11,7 +11,10 @@ namespace GameEngine
         public static readonly List<Quest> Quests = new List<Quest>();
         public static readonly List<Location> Locations = new List<Location>();
 
+
+
         //Constants
+            //Items
         public const int ITEM_ID_RUSTY_SWORD = 1;
         public const int ITEM_ID_RAT_TAIL = 2;
         public const int ITEM_ID_PIECE_OF_FUR = 3;
@@ -20,16 +23,20 @@ namespace GameEngine
         public const int ITEM_ID_CLUB = 6;
         public const int ITEM_ID_HEALING_POTION = 7;
         public const int ITEM_ID_SPIDER_FANG = 8;
-        public const int ITEM_ID_SPIDER_SILK = 9;
-        public const int ITEM_ID_ADVENTURER_PASS = 10;
+        public const int ITEM_ID_ADVENTURER_PASS = 9;
+        public const int ITEM_ID_SHINY_SWORD = 10;
 
+            //Monsters
         public const int MONSTER_ID_RAT = 1;
         public const int MONSTER_ID_SNAKE = 2;
         public const int MONSTER_ID_GIANT_SPIDER = 3;
 
+            //Quests
         public const int QUEST_ID_CLEAR_ALCHEMIST_GARDEN = 1;
         public const int QUEST_ID_CLEAR_FARMERS_FIELD = 2;
+        public const int QUEST_ID_CLEAR_SPIDER_FIELD = 3;
 
+            //Locations
         public const int LOCATION_ID_HOME = 1;
         public const int LOCATION_ID_TOWN_SQUARE = 2;
         public const int LOCATION_ID_GUARD_POST = 3;
@@ -53,15 +60,22 @@ namespace GameEngine
         //Methods
         private static void PopulateItems()
         {
+
+            //Weapons
             Items.Add(new Weapon(ITEM_ID_RUSTY_SWORD, "Rusty sword", "Rusty swords", 0, 5));
+            Items.Add(new Weapon(ITEM_ID_CLUB, "Club", "Clubs", 3, 10));
+            Items.Add(new Weapon(ITEM_ID_SHINY_SWORD, "Shiny sword", "Shiny swords", 5, 15));
+
+            //Items
             Items.Add(new Item(ITEM_ID_RAT_TAIL, "Rat tail", "Rat tails"));
             Items.Add(new Item(ITEM_ID_PIECE_OF_FUR, "Piece of fur", "Pieces of fur"));
             Items.Add(new Item(ITEM_ID_SNAKE_FANG, "Snake fang", "Snake fangs"));
             Items.Add(new Item(ITEM_ID_SNAKESKIN, "Snakeskin", "Snakeskins"));
-            Items.Add(new Weapon(ITEM_ID_CLUB, "Club", "Clubs", 3, 10));
+            
+            //Potions
             Items.Add(new HealingPotion(ITEM_ID_HEALING_POTION, "Healing potion", "Healing potions", 5));
             Items.Add(new Item(ITEM_ID_SPIDER_FANG, "Spider fang", "Spider fangs"));
-            Items.Add(new Item(ITEM_ID_SPIDER_SILK, "Spider silk", "Spider silks"));
+           
             Items.Add(new Item(ITEM_ID_ADVENTURER_PASS, "Adventurer pass", "Adventurer passes"));
         }
 
@@ -75,9 +89,9 @@ namespace GameEngine
             snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKE_FANG), 75, false));
             snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKESKIN), 75, true));
 
-            Monster giantSpider = new Monster(MONSTER_ID_GIANT_SPIDER, "Giant spider", 10, 5, 40, 10, 10);
-            giantSpider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_FANG), 75, true));
-            giantSpider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_SILK), 25, false));
+            Monster giantSpider = new Monster(MONSTER_ID_GIANT_SPIDER, "Giant spider", 5, 5, 40, 10, 10);
+            giantSpider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_FANG), 100, true));
+            
 
             Monsters.Add(rat);
             Monsters.Add(snake);
@@ -106,8 +120,19 @@ namespace GameEngine
 
             clearFarmersField.RewardItem = ItemByID(ITEM_ID_ADVENTURER_PASS);
 
+            Quest clearSpiderField =
+                new Quest(
+                    QUEST_ID_CLEAR_SPIDER_FIELD,
+                    "Clear the spider field",
+                    "Kill a spider in the spider field and retrieve a spider fang.", 30, 20);
+            clearSpiderField.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_SPIDER_FANG), 1));
+
+            clearSpiderField.RewardItem = ItemByID(ITEM_ID_SHINY_SWORD);
+
+
             Quests.Add(clearAlchemistGarden);
             Quests.Add(clearFarmersField);
+            Quests.Add(clearSpiderField);
         }
 
         private static void PopulateLocations()
@@ -132,6 +157,7 @@ namespace GameEngine
             Location guardPost = new Location(LOCATION_ID_GUARD_POST, "Guard post", "There is a large, tough-looking guard here.", ItemByID(ITEM_ID_ADVENTURER_PASS));
 
             Location bridge = new Location(LOCATION_ID_BRIDGE, "Bridge", "A stone bridge crosses a wide river.");
+            bridge.QuestAvailableHere = QuestByID(QUEST_ID_CLEAR_SPIDER_FIELD);
 
             Location spiderField = new Location(LOCATION_ID_SPIDER_FIELD, "Forest", "You see spider webs covering covering the trees in this forest.");
             spiderField.MonsterLivingHere = MonsterByID(MONSTER_ID_GIANT_SPIDER);
@@ -177,6 +203,7 @@ namespace GameEngine
             Locations.Add(farmersField);
             Locations.Add(bridge);
             Locations.Add(spiderField);
+            Locations.Add(village);
         }
 
         public static Item ItemByID(int id)
