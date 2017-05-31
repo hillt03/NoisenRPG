@@ -478,5 +478,7 @@ namespace NoisenRPG
             lblExperience.Text = _player.ExperiencePoints.ToString();
             lblLevel.Text = _player.Level.ToString();
         }
+
+       
     }
 }
