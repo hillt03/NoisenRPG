@@ -16,7 +16,7 @@ namespace NoisenRPG
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SuperAdventure());
+            Application.Run(new NoisenRPG());
         }
     }
 }

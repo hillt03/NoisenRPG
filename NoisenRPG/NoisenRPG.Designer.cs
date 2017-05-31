@@ -1,6 +1,6 @@
 ﻿namespace NoisenRPG
 {
-    partial class SuperAdventure
+    partial class NoisenRPG
     {
         /// <summary>
         /// Required designer variable.
