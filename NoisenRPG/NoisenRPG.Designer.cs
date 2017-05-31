@@ -134,7 +134,7 @@
             // cboWeapons
             // 
             this.cboWeapons.FormattingEnabled = true;
-            this.cboWeapons.Location = new System.Drawing.Point(369, 559);
+            this.cboWeapons.Location = new System.Drawing.Point(476, 559);
             this.cboWeapons.Name = "cboWeapons";
             this.cboWeapons.Size = new System.Drawing.Size(121, 21);
             this.cboWeapons.TabIndex = 9;
@@ -142,7 +142,7 @@
             // cboPotions
             // 
             this.cboPotions.FormattingEnabled = true;
-            this.cboPotions.Location = new System.Drawing.Point(369, 593);
+            this.cboPotions.Location = new System.Drawing.Point(476, 593);
             this.cboPotions.Name = "cboPotions";
             this.cboPotions.Size = new System.Drawing.Size(121, 21);
             this.cboPotions.TabIndex = 10;

@@ -93,7 +93,7 @@ namespace NoisenRPG
                         if (playerHasAllItemsToCompleteQuest)
                         {
                             // Display message
-                            rtbMessages.Text += Environment.NewLine;
+                            rtbMessages.Clear();
                             rtbMessages.Text += "You complete the '" + newLocation.QuestAvailableHere.Name + "' quest." + Environment.NewLine;
 
                             // Remove quest items from inventory
@@ -120,7 +120,7 @@ namespace NoisenRPG
                 else
                 {
                     // The player does not already have the quest
-
+                    rtbMessages.Clear();
                     // Display the messages
                     rtbMessages.Text += "You receive the " + newLocation.QuestAvailableHere.Name + " quest." + Environment.NewLine;
                     rtbMessages.Text += newLocation.QuestAvailableHere.Description + Environment.NewLine;
@@ -146,6 +146,7 @@ namespace NoisenRPG
             // Does the location have a monster?
             if (newLocation.MonsterLivingHere != null)
             {
+                
                 rtbMessages.Text += "You see a " + newLocation.MonsterLivingHere.Name + Environment.NewLine;
 
                 // Make a new monster, using the values from the standard monster in the World.Monster list
@@ -163,6 +164,11 @@ namespace NoisenRPG
                 cboPotions.Visible = true;
                 btnUseWeapon.Visible = true;
                 btnUsePotion.Visible = true;
+            }
+            else if ((newLocation.MonsterLivingHere == null) && (newLocation.QuestAvailableHere == null))
+            {
+                rtbMessages.Clear();
+
             }
             else
             {
@@ -305,6 +311,7 @@ namespace NoisenRPG
             if (_currentMonster.CurrentHitPoints <= 0)
             {
                 // Monster is dead
+                rtbMessages.Clear();
                 rtbMessages.Text += Environment.NewLine;
                 rtbMessages.Text += "You defeated the " + _currentMonster.Name + Environment.NewLine;
 
@@ -369,7 +376,9 @@ namespace NoisenRPG
                 rtbMessages.Text += Environment.NewLine;
 
                 // Move player to current location (to heal player and create a new monster to fight)
+               
                 MoveTo(_player.CurrentLocation);
+
             }
             else
             {
@@ -455,10 +464,12 @@ namespace NoisenRPG
         //Autoscroll Rich Textbox
         private void rtbMessages_TextChanged(object sender, EventArgs e)
         {
+            
             rtbMessages.SelectionStart = rtbMessages.Text.Length;
             rtbMessages.ScrollToCaret();
         }
 
+        
         private void UpdatePlayerStats()
         {
             // Refresh player information and inventory controls
