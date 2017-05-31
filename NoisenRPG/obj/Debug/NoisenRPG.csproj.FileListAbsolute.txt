@@ -1,0 +1,11 @@
+E:\projects\NoisenRPG\NoisenRPG\bin\Debug\NoisenRPG.exe.config
+E:\projects\NoisenRPG\NoisenRPG\bin\Debug\NoisenRPG.exe
+E:\projects\NoisenRPG\NoisenRPG\bin\Debug\NoisenRPG.pdb
+E:\projects\NoisenRPG\NoisenRPG\bin\Debug\GameEngine.dll
+E:\projects\NoisenRPG\NoisenRPG\bin\Debug\GameEngine.pdb
+E:\projects\NoisenRPG\NoisenRPG\obj\Debug\NoisenRPG.csprojResolveAssemblyReference.cache
+E:\projects\NoisenRPG\NoisenRPG\obj\Debug\SuperAdventure.Properties.Resources.resources
+E:\projects\NoisenRPG\NoisenRPG\obj\Debug\NoisenRPG.SuperAdventure.resources
+E:\projects\NoisenRPG\NoisenRPG\obj\Debug\NoisenRPG.csproj.GenerateResource.Cache
+E:\projects\NoisenRPG\NoisenRPG\obj\Debug\NoisenRPG.exe
+E:\projects\NoisenRPG\NoisenRPG\obj\Debug\NoisenRPG.pdb

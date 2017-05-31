@@ -42,6 +42,7 @@ namespace GameEngine
         public const int LOCATION_ID_FARM_FIELD = 7;
         public const int LOCATION_ID_BRIDGE = 8;
         public const int LOCATION_ID_SPIDER_FIELD = 9;
+        public const int LOCATION_ID_VILLAGE = 10;
 
         //Constructor
         static World()
@@ -77,7 +78,7 @@ namespace GameEngine
             snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKE_FANG), 75, false));
             snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKESKIN), 75, true));
 
-            Monster giantSpider = new Monster(MONSTER_ID_GIANT_SPIDER, "Giant spider", 20, 5, 40, 10, 10);
+            Monster giantSpider = new Monster(MONSTER_ID_GIANT_SPIDER, "Giant spider", 10, 5, 40, 10, 10);
             giantSpider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_FANG), 75, true));
             giantSpider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_SILK), 25, false));
 
@@ -138,6 +139,8 @@ namespace GameEngine
             Location spiderField = new Location(LOCATION_ID_SPIDER_FIELD, "Forest", "You see spider webs covering covering the trees in this forest.");
             spiderField.MonsterLivingHere = MonsterByID(MONSTER_ID_GIANT_SPIDER);
 
+            Location village = new Location(LOCATION_ID_VILLAGE, "Village", "You enter the village, many new warriors who come to Noisen island fail to make it here.");
+
             // Link the locations together
             home.LocationToNorth = townSquare;
 
@@ -163,6 +166,9 @@ namespace GameEngine
             bridge.LocationToEast = spiderField;
 
             spiderField.LocationToWest = bridge;
+            spiderField.LocationToNorth = village;
+
+            village.LocationToSouth = spiderField;
 
             // Add the locations to the static list
             Locations.Add(home);
