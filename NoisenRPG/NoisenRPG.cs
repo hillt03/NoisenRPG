@@ -404,6 +404,11 @@ namespace NoisenRPG
 
                     // Move player to "Home"
                     MoveTo(World.LocationByID(World.LOCATION_ID_HOME));
+
+                    btnUseWeapon.Visible = false;
+                    btnUsePotion.Visible = false;
+                    cboWeapons.Visible = false;
+                    cboPotions.Visible = false;
                 }
             }
         }
@@ -480,6 +485,7 @@ namespace NoisenRPG
             lblLevel.Text = _player.Level.ToString();
         }
 
+        //Music
         private WMPLib.WindowsMediaPlayer musicPlayer = new WMPLib.WindowsMediaPlayer();
         private void btnPlayMusic_Click(object sender, EventArgs e)
         {
