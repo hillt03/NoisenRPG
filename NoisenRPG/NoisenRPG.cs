@@ -168,8 +168,10 @@ namespace NoisenRPG
             }
             else if ((newLocation.MonsterLivingHere == null) && (newLocation.QuestAvailableHere == null))
             {
-                rtbMessages.Clear();
-
+                if(_player.CurrentHitPoints >= 1)
+                {
+                    rtbMessages.Clear();
+                }
             }
             else
             {
@@ -399,16 +401,15 @@ namespace NoisenRPG
 
                 if (_player.CurrentHitPoints <= 0)
                 {
-                    // Display message
-                    rtbMessages.Text += "The " + _currentMonster.Name + " killed you." + Environment.NewLine;
-
                     // Move player to "Home"
                     MoveTo(World.LocationByID(World.LOCATION_ID_HOME));
 
-                    btnUseWeapon.Visible = false;
-                    btnUsePotion.Visible = false;
-                    cboWeapons.Visible = false;
-                    cboPotions.Visible = false;
+                    // Display message
+                    rtbMessages.Text += "The " + _currentMonster.Name + " killed you." + Environment.NewLine;
+
+                    // Remove button visibility
+                    btnUseWeapon.Visible = btnUsePotion.Visible = cboWeapons.Visible = cboPotions.Visible = false;
+                   
                 }
             }
         }
