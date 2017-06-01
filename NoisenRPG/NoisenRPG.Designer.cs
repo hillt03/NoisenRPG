@@ -314,6 +314,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(493, 433);
+            this.MaximizeBox = false;
             this.Name = "NoisenRPG";
             this.Text = "NoisenRPG";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
