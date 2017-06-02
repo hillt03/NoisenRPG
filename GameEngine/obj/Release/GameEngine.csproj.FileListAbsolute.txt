@@ -1,0 +1,5 @@
+E:\projects\NoisenRPG\GameEngine\bin\Release\GameEngine.dll
+E:\projects\NoisenRPG\GameEngine\bin\Release\GameEngine.pdb
+E:\projects\NoisenRPG\GameEngine\obj\Release\GameEngine.csprojResolveAssemblyReference.cache
+E:\projects\NoisenRPG\GameEngine\obj\Release\GameEngine.dll
+E:\projects\NoisenRPG\GameEngine\obj\Release\GameEngine.pdb
