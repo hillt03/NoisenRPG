@@ -172,15 +172,13 @@ namespace NoisenRPG
                 {
                     rtbMessages.Clear();
                 }
+                _currentMonster = null;
+                cboWeapons.Visible = cboPotions.Visible = btnUseWeapon.Visible = btnUsePotion.Visible = false;
             }
             else
             {
                 _currentMonster = null;
-
-                cboWeapons.Visible = false;
-                cboPotions.Visible = false;
-                btnUseWeapon.Visible = false;
-                btnUsePotion.Visible = false;
+                cboWeapons.Visible = cboPotions.Visible = btnUseWeapon.Visible = btnUsePotion.Visible = false;
             }
 
             // Refresh player's inventory list

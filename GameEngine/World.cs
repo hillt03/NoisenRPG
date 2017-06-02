@@ -163,6 +163,7 @@ namespace GameEngine
             spiderField.MonsterLivingHere = MonsterByID(MONSTER_ID_GIANT_SPIDER);
 
             Location village = new Location(LOCATION_ID_VILLAGE, "Village", "You enter the village, many new warriors who come to Noisen island fail to make it here.");
+            
 
             // Link the locations together
             home.LocationToNorth = townSquare;
