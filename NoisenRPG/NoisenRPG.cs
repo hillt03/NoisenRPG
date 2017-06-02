@@ -483,17 +483,6 @@ namespace NoisenRPG
             lblLevel.Text = _player.Level.ToString();
         }
 
-        //Music
-        private WMPLib.WindowsMediaPlayer musicPlayer = new WMPLib.WindowsMediaPlayer();
-        private void btnPlayMusic_Click(object sender, EventArgs e)
-        {
-            musicPlayer.URL = "Solitude.mp3";
-            musicPlayer.controls.play();
-        }
-
-        private void btnStopMusic_Click(object sender, EventArgs e)
-        {
-            musicPlayer.controls.stop();
-        }
+        
     }
 }

@@ -2,4 +2,3 @@ E:\projects\NoisenRPG\GameEngine\bin\Debug\GameEngine.dll
 E:\projects\NoisenRPG\GameEngine\bin\Debug\GameEngine.pdb
 E:\projects\NoisenRPG\GameEngine\obj\Debug\GameEngine.dll
 E:\projects\NoisenRPG\GameEngine\obj\Debug\GameEngine.pdb
-E:\projects\NoisenRPG\GameEngine\obj\Debug\GameEngine.csprojResolveAssemblyReference.cache
