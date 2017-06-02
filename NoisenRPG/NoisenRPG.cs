@@ -173,7 +173,7 @@ namespace NoisenRPG
                 {
                     rtbMessages.Clear();
                 }
-                _currentMonster = null;
+                
                 cboWeapons.Visible = cboPotions.Visible = btnUseWeapon.Visible = btnUsePotion.Visible = false;
             }
             else
