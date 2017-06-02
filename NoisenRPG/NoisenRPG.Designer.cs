@@ -50,8 +50,6 @@
             this.rtbMessages = new System.Windows.Forms.RichTextBox();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
             this.dgvQuests = new System.Windows.Forms.DataGridView();
-            this.btnPlayMusic = new System.Windows.Forms.Button();
-            this.btnStopMusic = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).BeginInit();
             this.SuspendLayout();
@@ -263,33 +261,11 @@
             this.dgvQuests.Size = new System.Drawing.Size(312, 189);
             this.dgvQuests.TabIndex = 21;
             // 
-            // btnPlayMusic
-            // 
-            this.btnPlayMusic.Location = new System.Drawing.Point(221, 10);
-            this.btnPlayMusic.Name = "btnPlayMusic";
-            this.btnPlayMusic.Size = new System.Drawing.Size(75, 23);
-            this.btnPlayMusic.TabIndex = 22;
-            this.btnPlayMusic.Text = "Play Music";
-            this.btnPlayMusic.UseVisualStyleBackColor = true;
-            this.btnPlayMusic.Click += new System.EventHandler(this.btnPlayMusic_Click);
-            // 
-            // btnStopMusic
-            // 
-            this.btnStopMusic.Location = new System.Drawing.Point(221, 45);
-            this.btnStopMusic.Name = "btnStopMusic";
-            this.btnStopMusic.Size = new System.Drawing.Size(75, 23);
-            this.btnStopMusic.TabIndex = 23;
-            this.btnStopMusic.Text = "Stop Music";
-            this.btnStopMusic.UseVisualStyleBackColor = true;
-            this.btnStopMusic.Click += new System.EventHandler(this.btnStopMusic_Click);
-            // 
             // NoisenRPG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 651);
-            this.Controls.Add(this.btnStopMusic);
-            this.Controls.Add(this.btnPlayMusic);
             this.Controls.Add(this.dgvQuests);
             this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.rtbMessages);
@@ -347,8 +323,6 @@
         private System.Windows.Forms.RichTextBox rtbMessages;
         private System.Windows.Forms.DataGridView dgvInventory;
         private System.Windows.Forms.DataGridView dgvQuests;
-        private System.Windows.Forms.Button btnPlayMusic;
-        private System.Windows.Forms.Button btnStopMusic;
     }
 }
 

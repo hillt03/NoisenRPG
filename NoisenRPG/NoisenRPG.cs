@@ -470,32 +470,19 @@ namespace NoisenRPG
         //Autoscroll Rich Textbox
         private void rtbMessages_TextChanged(object sender, EventArgs e)
         {
-
             rtbMessages.SelectionStart = rtbMessages.Text.Length;
             rtbMessages.ScrollToCaret();
         }
 
-
+        // Refresh player information and inventory controls
         private void UpdatePlayerStats()
         {
-            // Refresh player information and inventory controls
             lblHitPoints.Text = _player.CurrentHitPoints.ToString();
             lblGold.Text = _player.Gold.ToString();
             lblExperience.Text = _player.ExperiencePoints.ToString();
             lblLevel.Text = _player.Level.ToString();
         }
 
-        //Music
-        private WMPLib.WindowsMediaPlayer musicPlayer = new WMPLib.WindowsMediaPlayer();
-        private void btnPlayMusic_Click(object sender, EventArgs e)
-        {
-            musicPlayer.URL = "Solitude.mp3";
-            musicPlayer.controls.play();
-        }
-
-        private void btnStopMusic_Click(object sender, EventArgs e)
-        {
-            musicPlayer.controls.stop();
-        }
+        
     }
 }
