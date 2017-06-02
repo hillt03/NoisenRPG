@@ -84,6 +84,7 @@ namespace NoisenRPG
                 // See if the player already has the quest
                 if (playerAlreadyHasQuest)
                 {
+                    rtbMessages.Clear();
                     // If the player has not completed the quest yet
                     if (!playerAlreadyCompletedQuest)
                     {
