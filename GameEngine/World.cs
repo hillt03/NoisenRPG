@@ -5,16 +5,18 @@ namespace GameEngine
 {
     public static class World
     {
+        #region Properties
         //Properties
         public static readonly List<Item> Items = new List<Item>();
         public static readonly List<Monster> Monsters = new List<Monster>();
         public static readonly List<Quest> Quests = new List<Quest>();
         public static readonly List<Location> Locations = new List<Location>();
+        #endregion
 
 
-
+        #region Constants
         //Constants
-            //Items
+        //Items
         public const int ITEM_ID_RUSTY_SWORD = 1;
         public const int ITEM_ID_RAT_TAIL = 2;
         public const int ITEM_ID_PIECE_OF_FUR = 3;
@@ -47,7 +49,10 @@ namespace GameEngine
         public const int LOCATION_ID_BRIDGE = 8;
         public const int LOCATION_ID_SPIDER_FIELD = 9;
         public const int LOCATION_ID_VILLAGE = 10;
+        public const int LOCATION_ID_JUNGLE = 11;
+    #endregion
 
+        #region Constructor
         //Constructor
         static World()
         {
@@ -56,8 +61,11 @@ namespace GameEngine
             PopulateQuests();
             PopulateLocations();
         }
+        #endregion
 
-        //Methods
+        // Methods
+
+        #region PopulateItems
         private static void PopulateItems()
         {
 
@@ -78,7 +86,9 @@ namespace GameEngine
            
             Items.Add(new Item(ITEM_ID_ADVENTURER_PASS, "Adventurer pass", "Adventurer passes"));
         }
+        #endregion
 
+        #region PopulateMonsters
         private static void PopulateMonsters()
         {
             Monster rat = new Monster(MONSTER_ID_RAT, "Rat", 5, 3, 10, 3, 3);
@@ -97,7 +107,9 @@ namespace GameEngine
             Monsters.Add(snake);
             Monsters.Add(giantSpider);
         }
+        #endregion
 
+        #region PopulateQuests
         private static void PopulateQuests()
         {
             Quest clearAlchemistGarden =
@@ -134,7 +146,9 @@ namespace GameEngine
             Quests.Add(clearFarmersField);
             Quests.Add(clearSpiderField);
         }
+        #endregion
 
+        #region PopulateLocations
         private static void PopulateLocations()
         {
             // Create each location
@@ -162,7 +176,9 @@ namespace GameEngine
             Location spiderField = new Location(LOCATION_ID_SPIDER_FIELD, "Forest", "You see spider webs covering covering the trees in this forest.");
             spiderField.MonsterLivingHere = MonsterByID(MONSTER_ID_GIANT_SPIDER);
 
-            Location village = new Location(LOCATION_ID_VILLAGE, "Village", "You enter the village, many new warriors who come to Noisen island fail to make it here.");
+            Location village = new Location(LOCATION_ID_VILLAGE, "Village", "You enter the village, many new warriors who come to Noisen island fail to make it here. A priest tells you about a monster wreaking havoc upon a camp in a jungle to the east.");
+
+            Location jungle = new Location(LOCATION_ID_JUNGLE, "Jungle", "You begin your journey into the jungle, it is seemingly calm thus far.");
             
 
             // Link the locations together
@@ -193,6 +209,9 @@ namespace GameEngine
             spiderField.LocationToNorth = village;
 
             village.LocationToSouth = spiderField;
+            village.LocationToEast = jungle;
+
+            jungle.LocationToWest = village;
 
             // Add the locations to the static list
             Locations.Add(home);
@@ -205,8 +224,11 @@ namespace GameEngine
             Locations.Add(bridge);
             Locations.Add(spiderField);
             Locations.Add(village);
+            Locations.Add(jungle);
         }
+        #endregion
 
+        #region ID Methods
         public static Item ItemByID(int id)
         {
             foreach (Item item in Items)
@@ -258,5 +280,6 @@ namespace GameEngine
 
             return null;
         }
+        #endregion
     }
 }

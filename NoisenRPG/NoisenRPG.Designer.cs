@@ -293,6 +293,7 @@
             this.MaximizeBox = false;
             this.Name = "NoisenRPG";
             this.Text = "NoisenRPG";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NoisenRPG_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).EndInit();
             this.ResumeLayout(false);
