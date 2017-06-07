@@ -489,9 +489,13 @@ namespace NoisenRPG
             lblLevel.Text = _player.Level.ToString();
         }
 
+
         private void NoisenRPG_FormClosing(object sender, FormClosingEventArgs e)
         {
             File.WriteAllText(PLAYER_DATA_FILE_NAME, _player.ToXmlString());
         }
+
+        
+
     }
 }
