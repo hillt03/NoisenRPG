@@ -57,6 +57,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label1.Location = new System.Drawing.Point(18, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
@@ -66,6 +67,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label2.Location = new System.Drawing.Point(41, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
@@ -75,6 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label3.Location = new System.Drawing.Point(10, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
@@ -84,6 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label4.Location = new System.Drawing.Point(37, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
@@ -93,6 +97,7 @@
             // lblHitPoints
             // 
             this.lblHitPoints.AutoSize = true;
+            this.lblHitPoints.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblHitPoints.Location = new System.Drawing.Point(69, 20);
             this.lblHitPoints.Name = "lblHitPoints";
             this.lblHitPoints.Size = new System.Drawing.Size(13, 13);
@@ -102,6 +107,7 @@
             // lblGold
             // 
             this.lblGold.AutoSize = true;
+            this.lblGold.ForeColor = System.Drawing.Color.Yellow;
             this.lblGold.Location = new System.Drawing.Point(69, 45);
             this.lblGold.Name = "lblGold";
             this.lblGold.Size = new System.Drawing.Size(13, 13);
@@ -111,6 +117,7 @@
             // lblExperience
             // 
             this.lblExperience.AutoSize = true;
+            this.lblExperience.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblExperience.Location = new System.Drawing.Point(69, 74);
             this.lblExperience.Name = "lblExperience";
             this.lblExperience.Size = new System.Drawing.Size(13, 13);
@@ -120,6 +127,7 @@
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
+            this.lblLevel.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblLevel.Location = new System.Drawing.Point(69, 100);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(13, 13);
@@ -129,6 +137,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label5.Location = new System.Drawing.Point(629, 528);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 13);
@@ -137,6 +146,8 @@
             // 
             // cboWeapons
             // 
+            this.cboWeapons.BackColor = System.Drawing.SystemColors.Desktop;
+            this.cboWeapons.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.cboWeapons.FormattingEnabled = true;
             this.cboWeapons.Location = new System.Drawing.Point(476, 559);
             this.cboWeapons.Name = "cboWeapons";
@@ -145,6 +156,8 @@
             // 
             // cboPotions
             // 
+            this.cboPotions.BackColor = System.Drawing.SystemColors.Desktop;
+            this.cboPotions.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.cboPotions.FormattingEnabled = true;
             this.cboPotions.Location = new System.Drawing.Point(476, 593);
             this.cboPotions.Name = "cboPotions";
@@ -153,66 +166,80 @@
             // 
             // btnUseWeapon
             // 
+            this.btnUseWeapon.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnUseWeapon.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnUseWeapon.Location = new System.Drawing.Point(620, 559);
             this.btnUseWeapon.Name = "btnUseWeapon";
             this.btnUseWeapon.Size = new System.Drawing.Size(87, 23);
             this.btnUseWeapon.TabIndex = 11;
             this.btnUseWeapon.Text = "Use Weapon";
-            this.btnUseWeapon.UseVisualStyleBackColor = true;
+            this.btnUseWeapon.UseVisualStyleBackColor = false;
             this.btnUseWeapon.Click += new System.EventHandler(this.btnUseWeapon_Click);
             // 
             // btnUsePotion
             // 
+            this.btnUsePotion.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnUsePotion.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnUsePotion.Location = new System.Drawing.Point(620, 593);
             this.btnUsePotion.Name = "btnUsePotion";
             this.btnUsePotion.Size = new System.Drawing.Size(87, 23);
             this.btnUsePotion.TabIndex = 12;
             this.btnUsePotion.Text = "Use Potion";
-            this.btnUsePotion.UseVisualStyleBackColor = true;
+            this.btnUsePotion.UseVisualStyleBackColor = false;
             this.btnUsePotion.Click += new System.EventHandler(this.btnUsePotion_Click);
             // 
             // btnNorth
             // 
+            this.btnNorth.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnNorth.ForeColor = System.Drawing.SystemColors.Info;
             this.btnNorth.Location = new System.Drawing.Point(476, 460);
             this.btnNorth.Name = "btnNorth";
             this.btnNorth.Size = new System.Drawing.Size(75, 23);
             this.btnNorth.TabIndex = 13;
             this.btnNorth.Text = "North";
-            this.btnNorth.UseVisualStyleBackColor = true;
+            this.btnNorth.UseVisualStyleBackColor = false;
             this.btnNorth.Click += new System.EventHandler(this.btnNorth_Click);
             // 
             // btnEast
             // 
+            this.btnEast.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnEast.ForeColor = System.Drawing.SystemColors.Info;
             this.btnEast.Location = new System.Drawing.Point(550, 489);
             this.btnEast.Name = "btnEast";
             this.btnEast.Size = new System.Drawing.Size(75, 23);
             this.btnEast.TabIndex = 14;
             this.btnEast.Text = "East";
-            this.btnEast.UseVisualStyleBackColor = true;
+            this.btnEast.UseVisualStyleBackColor = false;
             this.btnEast.Click += new System.EventHandler(this.btnEast_Click);
             // 
             // btnSouth
             // 
+            this.btnSouth.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnSouth.ForeColor = System.Drawing.SystemColors.Info;
             this.btnSouth.Location = new System.Drawing.Point(476, 518);
             this.btnSouth.Name = "btnSouth";
             this.btnSouth.Size = new System.Drawing.Size(75, 23);
             this.btnSouth.TabIndex = 15;
             this.btnSouth.Text = "South";
-            this.btnSouth.UseVisualStyleBackColor = true;
+            this.btnSouth.UseVisualStyleBackColor = false;
             this.btnSouth.Click += new System.EventHandler(this.btnSouth_Click);
             // 
             // btnWest
             // 
+            this.btnWest.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnWest.ForeColor = System.Drawing.SystemColors.Info;
             this.btnWest.Location = new System.Drawing.Point(404, 489);
             this.btnWest.Name = "btnWest";
             this.btnWest.Size = new System.Drawing.Size(75, 23);
             this.btnWest.TabIndex = 16;
             this.btnWest.Text = "West";
-            this.btnWest.UseVisualStyleBackColor = true;
+            this.btnWest.UseVisualStyleBackColor = false;
             this.btnWest.Click += new System.EventHandler(this.btnWest_Click);
             // 
             // rtbLocation
             // 
+            this.rtbLocation.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.rtbLocation.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.rtbLocation.Location = new System.Drawing.Point(347, 19);
             this.rtbLocation.Name = "rtbLocation";
             this.rtbLocation.ReadOnly = true;
@@ -222,6 +249,8 @@
             // 
             // rtbMessages
             // 
+            this.rtbMessages.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.rtbMessages.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.rtbMessages.Location = new System.Drawing.Point(347, 130);
             this.rtbMessages.Name = "rtbMessages";
             this.rtbMessages.ReadOnly = true;
@@ -234,6 +263,7 @@
             // 
             this.dgvInventory.AllowUserToAddRows = false;
             this.dgvInventory.AllowUserToDeleteRows = false;
+            this.dgvInventory.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventory.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvInventory.Enabled = false;
@@ -250,6 +280,7 @@
             this.dgvQuests.AllowUserToAddRows = false;
             this.dgvQuests.AllowUserToDeleteRows = false;
             this.dgvQuests.AllowUserToResizeRows = false;
+            this.dgvQuests.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvQuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuests.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvQuests.Enabled = false;
@@ -265,6 +296,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(719, 651);
             this.Controls.Add(this.dgvQuests);
             this.Controls.Add(this.dgvInventory);

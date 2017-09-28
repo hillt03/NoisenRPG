@@ -3,7 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using GameEngine;
-
+using System.Drawing;
 
 namespace NoisenRPG
 {
@@ -30,6 +30,7 @@ namespace NoisenRPG
             MoveTo(_player.CurrentLocation);
 
             UpdatePlayerStats();
+            UpdatedgvUI();
         }
 
         private void btnNorth_Click(object sender, EventArgs e)
@@ -495,7 +496,13 @@ namespace NoisenRPG
             File.WriteAllText(PLAYER_DATA_FILE_NAME, _player.ToXmlString());
         }
 
-        
+        private void UpdatedgvUI()
+        {
+            dgvInventory.DefaultCellStyle.BackColor = Color.DarkGray;
+            dgvQuests.DefaultCellStyle.BackColor = Color.DarkGray;
+            dgvInventory.DefaultCellStyle.ForeColor = Color.DimGray;
+            dgvQuests.DefaultCellStyle.ForeColor = Color.DimGray;
+        }
 
     }
 }
